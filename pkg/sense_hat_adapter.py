@@ -155,4 +155,4 @@ class SenseHatProperty(Property):
             self.device.controller.show_message(value)
         elif self.name == 'color':
             print("Setting color to %s" % value)
-            self.device.controller.clear(int(value.slice(1, 3)), int(value.slice(3, 5)), int(value.slice(5, 7)))
+            self.device.controller.clear(int(value.slice(1, 3), 16), int(value.slice(3, 5), 16), int(value.slice(5, 7), 16))
