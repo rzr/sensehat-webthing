@@ -20,6 +20,9 @@ rm -rf *.tgz package SHA256SUMS lib
 # Prep new package
 mkdir package lib
 
+# Make sure Cython is installed, as it's required to build numpy
+pip3 install Cython
+
 # Pull down Python dependencies
 pip3 install -r requirements.txt -t lib --no-binary :all: --prefix ""
 
